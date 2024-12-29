@@ -1,10 +1,13 @@
 import { FC } from 'react'
 import './App.css'
+import Header from './components/layout/Header'
+import Footer from './components/layout/Footer'
 
 const App: FC = () => {
   return (
     <div className="min-h-screen bg-white">
-      <main className="flex flex-col">
+      <Header />
+      <main className="flex flex-col pt-16">
         {/* Hero Section */}
         <section id="hero" className="min-h-screen">
           {/* Content will be added later */}
@@ -24,12 +27,8 @@ const App: FC = () => {
         <section id="about" className="py-20">
           {/* Content will be added later */}
         </section>
-
-        {/* Footer */}
-        <footer className="bg-sansan-blue text-white py-10">
-          {/* Content will be added later */}
-        </footer>
       </main>
+      <Footer />
     </div>
   )
 }
