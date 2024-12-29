@@ -17,7 +17,7 @@ const Hero: FC = () => {
           - Consider different image sizes for mobile/desktop
       */}
       <img 
-        src="/images/hero-bg8.jpg"
+        src="/images/hero-bg.jpg"
         alt=""
         className="absolute inset-0 w-full h-full object-cover z-0"
         aria-hidden="true"
