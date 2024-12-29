@@ -4,6 +4,7 @@ import Footer from './components/layout/Footer'
 import Hero from './components/sections/Hero'
 import Achievements from './components/sections/Achievements'
 import Challenges from './components/sections/Challenges'
+import AboutYou from './components/sections/AboutYou'
 
 const App: FC = () => {
   return (
@@ -22,8 +23,8 @@ const App: FC = () => {
           <Challenges />
         </section>
 
-        <section id="about" className="w-full py-20">
-          {/* Content will be added later */}
+        <section id="about" className="w-full bg-gray-50">
+          <AboutYou />
         </section>
       </main>
       <Footer />
