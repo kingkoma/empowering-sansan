@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Exclude actual resume file but keep the directory
+public/documents/*
+!public/documents/.gitkeep

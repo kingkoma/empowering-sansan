@@ -1,11 +1,10 @@
-import { FC, useState, useEffect, useRef } from 'react';
+import { FC, useState, useRef } from 'react';
 import { content } from '../../data/content';
 import Card from '../ui/Card';
 
 const AboutYou: FC = () => {
   const { about } = content;
   const [showCongrats, setShowCongrats] = useState(false);
-  const congratsRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
 
   const handleClose = () => {
@@ -20,6 +19,11 @@ const AboutYou: FC = () => {
 
   const handleHiringClick = () => {
     setShowCongrats(prev => !prev);
+  };
+
+  const handleDownload = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const fileName = about.resumeLink.split('/').pop() || 'resume.pdf';
+    e.currentTarget.download = fileName;
   };
 
   return (
@@ -52,13 +56,14 @@ const AboutYou: FC = () => {
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <a
             href={about.resumeLink}
+            onClick={handleDownload}
             className="inline-flex items-center justify-center px-6 py-3 
                      border-2 border-sansan-blue text-sansan-blue font-medium 
                      rounded-lg hover:bg-sansan-blue hover:text-white 
                      transition-colors duration-300"
-            target="_blank"
-            rel="noopener noreferrer"
+            download
           >
+            <span className="mr-2">📄</span>
             履歴書をダウンロード
           </a>
           <button

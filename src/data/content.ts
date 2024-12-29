@@ -26,7 +26,7 @@ export const content = {
     about: {
       professionalBackground: "Full-stack developer with 5 years of experience in building scalable web applications.",
       goals: "To contribute to Sansan's innovative solutions by leveraging expertise in cloud technologies.",
-      resumeLink: "/resume.pdf",
+      resumeLink: "/documents/resume.pdf",
     },
     footer: {
       contact: "contact@sansan.com",
