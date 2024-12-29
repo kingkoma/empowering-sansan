@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { content } from '../../data/content';
+import SectionTitle from '../ui/SectionTitle';
 
 const Hero: FC = () => {
   const { hero } = content;
@@ -23,22 +24,19 @@ const Hero: FC = () => {
       />
 
       {/* Content */}
-      <div className="container-wrapper relative z-10">
+      <div className="container-wrapper-hero relative z-10">
         <div className="flex flex-col justify-center min-h-screen pt-16 md:pt-40">
-          <div className="bg-gradient-to-r from-white/80 via-white/65 to-white/10 
-                       backdrop-blur-sm px-6 md:px-8 py-4 md:py-6 rounded-lg mb-16 md:mb-24 shadow-lg
-                       max-w-2xl">
-            <h1 
-              className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-sansan-blue 
-                       tracking-tight leading-tight"
-              data-testid="hero-title"
-            >
-              {hero.title}
-            </h1>
-          </div>
+          <SectionTitle 
+            className="mb-16" 
+            withBackground 
+            maxWidth="max-w-2xl"
+            align="left"
+          >
+            {hero.title}
+          </SectionTitle>
           
           <div className="max-w-lg">
-            <div className="backdrop-blur-sm rounded-xl p-6 md:p-8">
+            <div className="backdrop-blur-sm rounded-xl">
               <p className="text-base sm:text-lg md:text-2xl text-white font-bold leading-relaxed" 
                  data-testid="hero-content"
               >

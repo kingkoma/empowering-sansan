@@ -2,6 +2,7 @@ import { FC, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { content } from '../../data/content';
 import Card from '../ui/Card';
+import SectionTitle from '../ui/SectionTitle';
 
 const Achievements: FC = () => {
   const { achievements } = content;
@@ -10,9 +11,9 @@ const Achievements: FC = () => {
   return (
     <div className="container-wrapper py-20">
       {/* Section Title */}
-      <h2 className="text-3xl md:text-4xl font-bold text-sansan-blue text-center mb-12">
-      Sansanでしか実現できない変革
-      </h2>
+      <SectionTitle className="mb-12">
+        Sansanでしか実現できない変革
+      </SectionTitle>
 
       {/* Achievement Card Slider */}
       <div className="max-w-2xl mx-auto relative">

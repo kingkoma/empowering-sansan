@@ -2,6 +2,7 @@ import { FC, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { content } from '../../data/content';
 import Card from '../ui/Card';
+import SectionTitle from '../ui/SectionTitle';
 
 const Challenges: FC = () => {
   const { challenges } = content;
@@ -10,9 +11,9 @@ const Challenges: FC = () => {
   return (
     <div className="container-wrapper py-20">
       {/* Section Title */}
-      <h2 className="text-3xl md:text-4xl font-bold text-sansan-blue text-center mb-12">
-      障壁とその乗り越え方
-      </h2>
+      <SectionTitle className="mb-12">
+        障壁とその乗り越え方
+      </SectionTitle>
 
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-6">

@@ -1,6 +1,7 @@
 import { FC, useState, useRef } from 'react';
 import { content } from '../../data/content';
 import Card from '../ui/Card';
+import SectionTitle from '../ui/SectionTitle';
 
 const AboutYou: FC = () => {
   const { about } = content;
@@ -29,9 +30,9 @@ const AboutYou: FC = () => {
   return (
     <div className="container-wrapper py-20">
       {/* Section Title */}
-      <h2 className="text-3xl md:text-4xl font-bold text-sansan-blue text-center mb-12">
-      挑戦を価値に変える
-      </h2>
+      <SectionTitle className="mb-12">
+        挑戦を価値に変える
+      </SectionTitle>
 
       <div className="max-w-4xl mx-auto">
         {/* Business Card Style Introduction */}
