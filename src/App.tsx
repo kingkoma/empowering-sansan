@@ -3,6 +3,7 @@ import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
 import Hero from './components/sections/Hero'
 import Achievements from './components/sections/Achievements'
+import Challenges from './components/sections/Challenges'
 
 const App: FC = () => {
   return (
@@ -17,8 +18,8 @@ const App: FC = () => {
           <Achievements />
         </section>
 
-        <section id="challenges" className="w-full py-20">
-          {/* Content will be added later */}
+        <section id="challenges" className="w-full">
+          <Challenges />
         </section>
 
         <section id="about" className="w-full py-20">
