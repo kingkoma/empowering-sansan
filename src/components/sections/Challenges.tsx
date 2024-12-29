@@ -1,55 +1,86 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
+import ReactMarkdown from 'react-markdown';
 import { content } from '../../data/content';
 import Card from '../ui/Card';
 
 const Challenges: FC = () => {
   const { challenges } = content;
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   return (
     <div className="container-wrapper py-20">
       {/* Section Title */}
       <h2 className="text-3xl md:text-4xl font-bold text-sansan-blue text-center mb-12">
-        課題と解決策
+      障壁とその乗り越え方
       </h2>
 
-      {/* Challenges Grid - Two Column Layout */}
       <div className="max-w-6xl mx-auto">
-        {challenges.map((item, index) => (
-          <div 
-            key={index}
-            className="grid md:grid-cols-2 gap-6 mb-8 last:mb-0 group"
-          >
-            {/* Challenge Column */}
-            <Card className="bg-sansan-red/20 hover:bg-sansan-red/25 transform transition-all duration-300 
-                           hover:-translate-y-1 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-16 h-16 -mt-8 -mr-8 bg-sansan-red/10 rounded-full" />
-              <div className="relative">
-                <h3 className="text-xl font-bold text-sansan-red mb-3 flex items-center">
-                  <span className="mr-2">⚠️</span>
-                  課題
-                </h3>
-                <p className="text-gray-600">
-                  {item.challenge}
-                </p>
-              </div>
-            </Card>
-
-            {/* Solution Column */}
-            <Card className="bg-sansan-blue/20 hover:bg-sansan-blue/25 transform transition-all duration-300 
-                           hover:-translate-y-1 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-16 h-16 -mt-8 -mr-8 bg-sansan-blue/10 rounded-full" />
-              <div className="relative">
-                <h3 className="text-xl font-bold text-sansan-blue mb-3 flex items-center">
-                  <span className="mr-2">💡</span>
-                  解決策
-                </h3>
-                <p className="text-gray-600">
-                  {item.solution}
-                </p>
+        <div className="grid md:grid-cols-2 gap-6">
+          {/* Challenge Column */}
+          <div className="relative overflow-hidden rounded-xl group/card">
+            <div 
+              className="absolute inset-0 z-0 transition-all duration-500
+                       group-hover/card:scale-105 group-hover/card:opacity-35"
+              style={{
+                backgroundImage: 'url("/images/challenges/challenge-bg.jpg")',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                opacity: 0.25
+              }}
+            />
+            <Card className="bg-transparent backdrop-blur-sm border-none h-full z-10 relative
+                         transition-transform duration-500 group-hover/card:translate-y-[-4px]">
+              <h3 className="text-xl font-bold text-sansan-red mb-3">
+                {challenges[currentIndex].challengeTitle}
+              </h3>
+              <div className="prose prose-gray max-w-none">
+                <ReactMarkdown>
+                  {challenges[currentIndex].challenge}
+                </ReactMarkdown>
               </div>
             </Card>
           </div>
-        ))}
+
+          {/* Solution Column */}
+          <div className="relative overflow-hidden rounded-xl group/card">
+            <div 
+              className="absolute inset-0 z-0 transition-all duration-500
+                       group-hover/card:scale-105 group-hover/card:opacity-35"
+              style={{
+                backgroundImage: 'url("/images/challenges/solution-bg.jpg")',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                opacity: 0.25
+              }}
+            />
+            <Card className="bg-transparent backdrop-blur-sm border-none h-full z-10 relative
+                         transition-transform duration-500 group-hover/card:translate-y-[-4px]">
+              <h3 className="text-xl font-bold text-sansan-blue mb-3">
+                {challenges[currentIndex].solutionTitle}
+              </h3>
+              <div className="prose prose-gray max-w-none">
+                <ReactMarkdown>
+                  {challenges[currentIndex].solution}
+                </ReactMarkdown>
+              </div>
+            </Card>
+          </div>
+        </div>
+
+        {/* Pagination Indicators */}
+        <div className="flex justify-center gap-3 mt-8">
+          {challenges.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`h-2 rounded-full transition-all duration-300 
+                        ${currentIndex === index 
+                          ? 'w-8 bg-sansan-blue' 
+                          : 'w-2 bg-gray-300 hover:bg-sansan-blue/50'}`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
