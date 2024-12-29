@@ -1,31 +1,26 @@
 import { FC } from 'react'
-import './App.css'
 import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
 import Hero from './components/sections/Hero'
 
 const App: FC = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="w-full min-h-screen">
       <Header />
-      <main className="flex flex-col pt-16">
-        {/* Hero Section */}
-        <section id="hero">
+      <main className="w-full">
+        <section id="hero" className="w-full">
           <Hero />
         </section>
 
-        {/* Achievements Section */}
-        <section id="achievements" className="py-20">
+        <section id="achievements" className="w-full py-20">
           {/* Content will be added later */}
         </section>
 
-        {/* Challenges Section */}
-        <section id="challenges" className="py-20">
+        <section id="challenges" className="w-full py-20">
           {/* Content will be added later */}
         </section>
 
-        {/* About You Section */}
-        <section id="about" className="py-20">
+        <section id="about" className="w-full py-20">
           {/* Content will be added later */}
         </section>
       </main>
