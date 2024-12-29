@@ -2,6 +2,7 @@ import { FC } from 'react'
 import './App.css'
 import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
+import Hero from './components/sections/Hero'
 
 const App: FC = () => {
   return (
@@ -9,8 +10,8 @@ const App: FC = () => {
       <Header />
       <main className="flex flex-col pt-16">
         {/* Hero Section */}
-        <section id="hero" className="min-h-screen">
-          {/* Content will be added later */}
+        <section id="hero">
+          <Hero />
         </section>
 
         {/* Achievements Section */}
