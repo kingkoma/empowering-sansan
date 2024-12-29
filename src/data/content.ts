@@ -1,6 +1,6 @@
 export const content = {
     hero: {
-      title: "Empowering Sansan",
+      title: "出会いを革新する",
       coreMessage: "これまでの多様なプロジェクトで培った経験が、まるで点と線で繋がるように、Sansanという存在にたどり着きました。ビジネスプロセスの理解や技術的課題の解決、そしてワークフローの最適化など、これまで蓄えてきた知識とスキルを活かし、SansanのMVVに基づく文化とイノベーションの力で社会を変えていきたい。Sansanは、私にとって次のステージであり、挑戦の場です。",
     },
     achievements: [

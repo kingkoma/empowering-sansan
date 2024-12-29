@@ -26,3 +26,7 @@ dist-ssr
 # Exclude actual resume file but keep the directory
 public/documents/*
 !public/documents/.gitkeep
+
+# Exclude large images but keep the directory
+public/images/*
+!public/images/.gitkeep
