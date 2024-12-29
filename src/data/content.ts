@@ -101,11 +101,39 @@ export const content = {
       resumeLink: "/documents/resume.pdf",
     },
     footer: {
-      contact: "contact@sansan.com",
+      contact: {
+        email: "contact@example.com",
+        social: [
+          { name: "GitHub", url: "https://github.com/sansan" },
+          { name: "LinkedIn", url: "https://linkedin.com/company/sansan" },
+        ]
+      },
       resources: [
-        { name: "GitHub", url: "https://github.com/sansan" },
-        { name: "Company Website", url: "https://www.sansan.com" },
+        { 
+          title: "研究・技術資料",
+          links: [
+            { name: "Sansanのエンジニアブログ", url: "https://buildersbox.corp-sansan.com/" },
+            { name: "技術スタック", url: "https://sansan.github.io/technology-stack/" },
+            { name: "研究開発レポート", url: "https://jp.corp-sansan.com/rd/" }
+          ]
+        },
+        {
+          title: "参考文献",
+          links: [
+            { name: "Sansan Tech Blog", url: "https://engineering.sansan.com/" },
+            { name: "Eight Career Design", url: "https://8card.net/career-design/" },
+            { name: "Bill One 開発者ブログ", url: "https://billone.engineering/" }
+          ]
+        }
       ],
+      copyright: {
+        statement: "© 2024 Empowering Sansan. All rights reserved.",
+        attribution: [
+          "Background images: Unsplash - Licensed under Creative Commons Zero",
+          "Icons: Heroicons - MIT License",
+          "Fonts: Sofia Pro - Licensed through Adobe Fonts"
+        ]
+      }
     },
   };
   
