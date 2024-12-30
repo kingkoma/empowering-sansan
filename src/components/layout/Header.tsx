@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 const Header: FC = () => {
   return (
-    <header className="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-sm shadow-sm h-16">
+    <header className="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-sm shadow-sm h-28 sm:h-16">
       <div className="container-wrapper h-full">
         <nav className="flex items-center justify-between h-full">
           {/* Logo/Brand with red underline */}
@@ -16,7 +16,6 @@ const Header: FC = () => {
               aria-hidden="true"
             />
           </div>
-
         </nav>
       </div>
     </header>

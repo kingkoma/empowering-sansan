@@ -22,7 +22,6 @@
     @apply w-full mx-auto px-4 sm:px-6 lg:px-8;
   }
 
-  /* Add a specific variant for hero section */
   .container-wrapper-hero {
     @apply w-full mx-auto px-4 sm:px-6 lg:pl-20 lg:pr-8;
   }
