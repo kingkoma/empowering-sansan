@@ -8,9 +8,6 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-dist
-dist-ssr
-*.local
 
 # Editor directories and files
 .vscode/*
@@ -30,3 +27,11 @@ public/documents/*
 # Exclude large images but keep the directory
 public/images/*
 !public/images/.gitkeep
+
+# Build
+dist
+dist-ssr
+*.local
+.env.local
+.env.production
+.env.development
