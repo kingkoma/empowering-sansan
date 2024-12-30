@@ -26,7 +26,7 @@ const SectionTitle: FC<SectionTitleProps> = ({
         <span className="text-3xl md:text-4xl font-bold text-sansan-blue inline-block relative">
           {children}
           <span 
-            className="absolute left-[5%] block h-[3px] w-[80px] 
+            className="absolute left-[5%] block h-[5px] w-[90px] 
                      bg-sansan-red mt-2"
             aria-hidden="true"
           />
