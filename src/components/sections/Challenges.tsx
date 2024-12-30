@@ -20,7 +20,7 @@ const Challenges: FC = () => {
           {/* Challenge Column */}
           <div className="relative overflow-hidden rounded-xl group/card">
             <div 
-              className="absolute inset-0 z-0 transition-all duration-500
+              className="absolute inset-0 z-0 transition-all duration-300
                        group-hover/card:scale-105 group-hover/card:opacity-35"
               style={{
                 backgroundImage: 'url("/images/challenges/challenge-bg.jpg")',
@@ -30,7 +30,7 @@ const Challenges: FC = () => {
               }}
             />
             <Card className="bg-transparent backdrop-blur-sm border-none h-full z-10 relative
-                         transition-transform duration-500 group-hover/card:translate-y-[-4px]">
+                         transition-transform duration-300 group-hover/card:translate-y-[-4px]">
               <h3 className="text-xl font-bold text-sansan-red mb-3">
                 {challenges[currentIndex].challengeTitle}
               </h3>
@@ -45,7 +45,7 @@ const Challenges: FC = () => {
           {/* Solution Column */}
           <div className="relative overflow-hidden rounded-xl group/card">
             <div 
-              className="absolute inset-0 z-0 transition-all duration-500
+              className="absolute inset-0 z-0 transition-all duration-300
                        group-hover/card:scale-105 group-hover/card:opacity-35"
               style={{
                 backgroundImage: 'url("/images/challenges/solution-bg.jpg")',
@@ -55,7 +55,7 @@ const Challenges: FC = () => {
               }}
             />
             <Card className="bg-transparent backdrop-blur-sm border-none h-full z-10 relative
-                         transition-transform duration-500 group-hover/card:translate-y-[-4px]">
+                         transition-transform duration-300 group-hover/card:translate-y-[-4px]">
               <h3 className="text-xl font-bold text-sansan-blue mb-3">
                 {challenges[currentIndex].solutionTitle}
               </h3>
