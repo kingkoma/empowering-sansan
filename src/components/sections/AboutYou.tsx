@@ -90,32 +90,44 @@ const AboutYou: FC = () => {
           </Card>
         </div>
 
-        {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
+        {/* Resume Download Button */}
+        <div className="flex justify-center mb-12">
           <a
             href={about.resumeLink}
             onClick={handleDownload}
-            className="inline-flex items-center justify-center px-6 py-3 
+            className="inline-flex items-center justify-center px-8 py-3 
                      border-2 border-sansan-blue text-sansan-blue font-medium 
                      rounded-lg hover:bg-sansan-blue hover:text-white 
-                     transition-colors duration-300"
+                     transition-all duration-300 transform hover:scale-105
+                     shadow-md hover:shadow-lg"
             download
           >
-            <span className="mr-2">📄</span>
+            <span className="mr-3 text-xl">📄</span>
             履歴書をダウンロード
           </a>
+        </div>
+
+        {/* CTA Button - Hire Me */}
+        <div className="relative flex justify-center">
           <button
             ref={buttonRef}
             onClick={handleHiringClick}
-            className="inline-flex items-center justify-center px-6 py-3 
-                     bg-sansan-red text-white font-medium rounded-lg 
-                     hover:bg-sansan-red/90 transition-colors duration-300"
+            className="group relative px-10 py-4 bg-sansan-red text-white font-bold text-lg
+                     rounded-lg transform transition-all duration-300
+                     hover:scale-105 hover:shadow-xl active:scale-95
+                     overflow-hidden"
           >
-            採用する
+            <span className="relative z-10 flex items-center">
+              <span className="mr-2">🚀</span>
+              採用する
+              <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+            </span>
+            <div className="absolute inset-0 bg-gradient-to-r from-sansan-red via-red-500 to-sansan-red
+                         opacity-0 group-hover:opacity-100 transition-opacity"></div>
           </button>
         </div>
 
-        {/* Congratulations Message */}
+        {/* Congratulations Message Modal */}
         {showCongrats && (
           <div 
             onClick={handleOverlayClick}
@@ -129,7 +141,7 @@ const AboutYou: FC = () => {
               >
                 ✕
               </button>
-              <div className="px-6 py-4">
+              <div className="px-8 py-6">
                 <p className="text-lg font-medium flex items-center gap-2">
                   <span className="animate-bounce">🎉</span>
                   素晴らしい決断をしていただき、ありがとうございます！
