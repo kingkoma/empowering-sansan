@@ -43,15 +43,17 @@ const AboutYou: FC = () => {
                         bg-gradient-to-br from-white to-gray-50 relative overflow-hidden
                         cursor-pointer">
             {/* Profile Image Section */}
-            <div className="w-[182px] h-full relative overflow-hidden bg-sansan-blue/10 rounded-l-xl">
-              <img 
-                src="/images/profile/my-photo.jpg" 
-                alt="Profile" 
-                className="w-full h-[104%] object-cover object-[38%_center] transition-transform duration-500
-                         group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent 
-                            transition-opacity duration-500 hover:opacity-0" />
+            <div className="min-w-[182px] h-full relative overflow-hidden bg-sansan-blue/10 rounded-l-xl">
+              <div className="absolute inset-0 w-[calc(100%+2px)] h-full left-[-4px]">
+                <img 
+                  src="/images/profile/my-photo.jpg" 
+                  alt="Profile" 
+                  className="w-full h-[117%] object-cover object-[38%_center] transition-transform duration-500
+                           group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent 
+                              transition-opacity duration-500 hover:opacity-0" />
+              </div>
             </div>
 
             {/* Content Section */}
