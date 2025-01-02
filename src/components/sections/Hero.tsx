@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { content } from '../../data/content';
 import SectionTitle from '../ui/SectionTitle';
+import OptimizedImage from '../ui/OptimizedImage';
 
 const Hero: FC = () => {
   const { hero } = content;
@@ -11,13 +12,14 @@ const Hero: FC = () => {
       data-testid="hero-section"
     >
       {/* Background Image */}
-      <div className="absolute inset-0">
-        <img 
+      <div className="absolute inset-0 w-full h-full">
+        <OptimizedImage
           src="/images/hero-bg.jpg"
-          alt=""
+          alt="Hero background"
           className="w-full h-full object-cover"
-          aria-hidden="true"
         />
+        {/* Optional overlay */}
+        <div className="absolute inset-0 bg-black/30" />
       </div>
 
       {/* Content */}
