@@ -91,37 +91,36 @@ const AboutYou: FC = () => {
           </Card>
         </div>
 
-        {/* Resume Download Button */}
-        <div className="flex justify-center mb-12">
+        {/* Buttons Container - New wrapper div */}
+        <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-20">
+          {/* Resume Download Button */}
           <a
             href={about.resumeLink}
             onClick={handleDownload}
-            className="inline-flex items-center justify-center px-8 py-3 
-                     border-2 border-sansan-blue text-sansan-blue font-medium 
-                     rounded-lg hover:bg-sansan-blue hover:text-white 
-                     transition-all duration-300 transform hover:scale-105
-                     shadow-md hover:shadow-lg"
+            className="group relative px-4 py-4 bg-sansan-blue text-white font-bold text-lg
+                     rounded-lg transform transition-all duration-300
+                     hover:scale-105 hover:shadow-xl active:scale-95
+                     overflow-hidden w-[250px]"
             download
           >
-            <span className="mr-3 text-xl">📄</span>
-            書類をダウンロード
+            <span className="relative z-10 flex items-center justify-center">
+              書類をダウンロード
+            </span>
+            <div className="absolute inset-0 bg-gradient-to-r from-sansan-blue via-blue-600 to-sansan-blue
+                         opacity-0 group-hover:opacity-100 transition-opacity"></div>
           </a>
-        </div>
 
-        {/* CTA Button - Hire Me */}
-        <div className="relative flex justify-center">
+          {/* CTA Button - Hire Me */}
           <button
             ref={buttonRef}
             onClick={handleHiringClick}
             className="group relative px-10 py-4 bg-sansan-red text-white font-bold text-lg
                      rounded-lg transform transition-all duration-300
                      hover:scale-105 hover:shadow-xl active:scale-95
-                     overflow-hidden"
+                     overflow-hidden w-[250px]"
           >
-            <span className="relative z-10 flex items-center">
-              <span className="mr-2">🚀</span>
-              採用する
-              <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+            <span className="relative z-10 flex items-center justify-center">
+              今すぐ採用
             </span>
             <div className="absolute inset-0 bg-gradient-to-r from-sansan-red via-red-500 to-sansan-red
                          opacity-0 group-hover:opacity-100 transition-opacity"></div>
