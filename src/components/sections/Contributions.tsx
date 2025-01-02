@@ -68,7 +68,7 @@ const Contributions: FC = () => {
   return (
     <div className="container-wrapper py-20">
       <SectionTitle className="mb-12">
-        Sansanへの貢献
+      泰山を運ぶ一粒の力に
       </SectionTitle>
 
       <div className="max-w-6xl mx-auto relative">

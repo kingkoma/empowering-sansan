@@ -24,7 +24,7 @@ const Achievements: FC = () => {
   return (
     <div className="container-wrapper py-20">
       <SectionTitle className="mb-12">
-        Sansanでしか実現できない変革
+        Sansan でしか実現できない変革
       </SectionTitle>
 
       <div className="max-w-2xl mx-auto relative">
