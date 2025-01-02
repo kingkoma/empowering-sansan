@@ -1,7 +1,5 @@
 import { FC } from 'react';
 
-const ASSETS_URL = import.meta.env.VITE_AWS_ASSETS_URL;
-
 const Header: FC = () => {
   return (
     <header className="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-sm shadow-sm h-28 sm:h-16">
@@ -22,13 +20,6 @@ const Header: FC = () => {
             />
           </div>
         </nav>
-      </div>
-      <div className="absolute inset-0 w-full h-full">
-        <img
-          src={`${ASSETS_URL}/images/sansan-logo.png`}
-          alt="Sansan Logo"
-          className="h-8 w-auto opacity-90"
-        />
       </div>
     </header>
   );

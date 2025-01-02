@@ -1,18 +1,20 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/images/favicon/favicon.png" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Empowering Sansan - Innovation through connection" />
-    <meta name="theme-color" content="#004e98" />
-    <title>Empowering Sansan</title>
     <link 
-      rel="preload" 
-      href="/images/hero-bg.jpg?w=1920&format=webp&q=80" 
+      rel="icon" 
+      type="image/png" 
+      href="%VITE_AWS_ASSETS_URL%/images/favicon/favicon.png"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Empowering Sansan</title>
+    <!-- Preload critical images -->
+    <link
+      rel="preload"
       as="image"
-      fetchpriority="high"
+      href="%VITE_AWS_ASSETS_URL%/images/hero-bg.jpg"
+      type="image/jpeg"
     />
   </head>
   <body>

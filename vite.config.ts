@@ -31,5 +31,15 @@ export default defineConfig({
   server: {
     port: 3000,
     strictPort: true
+  },
+  envPrefix: 'VITE_',
+  // Enable environment variables in HTML
+  experimental: {
+    renderBuiltUrl: (filename: string, { hostType }: { hostType: 'js' | 'html' | 'css' }) => {
+      if (hostType === 'html') {
+        return process.env.VITE_AWS_ASSETS_URL + filename;
+      }
+      return filename;
+    }
   }
 })
