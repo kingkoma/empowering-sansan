@@ -23,9 +23,7 @@ const Challenges: FC = () => {
 
   return (
     <div className="container-wrapper py-20">
-      <SectionTitle className="mb-12">
-        障壁とその乗り越え方
-      </SectionTitle>
+      <SectionTitle className="mb-12">障壁とその乗り越え方</SectionTitle>
 
       <div className="max-w-6xl mx-auto relative">
         <NavigationArrows
@@ -38,50 +36,50 @@ const Challenges: FC = () => {
         <div className="grid md:grid-cols-2 gap-6 relative">
           {/* Challenge Column */}
           <div className="relative overflow-hidden rounded-xl group/card">
-            <div 
+            <div
               className="absolute inset-0 z-0 transition-all duration-300
                        group-hover/card:scale-105 group-hover/card:opacity-35"
               style={{
                 backgroundImage: 'url("/images/challenges/challenge-bg.jpg")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                opacity: 0.25
+                opacity: 0.25,
               }}
             />
-            <Card className="bg-transparent backdrop-blur-sm border-none h-full z-10 relative
-                         transition-transform duration-300 group-hover/card:translate-y-[-4px]">
+            <Card
+              className="bg-transparent backdrop-blur-sm border-none h-full z-10 relative
+                         transition-transform duration-300 group-hover/card:translate-y-[-4px]"
+            >
               <h3 className="text-xl font-bold text-sansan-red mb-3 text-center">
                 {challenges[currentIndex].challengeTitle}
               </h3>
               <div className="prose prose-gray max-w-none">
-                <ReactMarkdown>
-                  {challenges[currentIndex].challenge}
-                </ReactMarkdown>
+                <ReactMarkdown>{challenges[currentIndex].challenge}</ReactMarkdown>
               </div>
             </Card>
           </div>
 
           {/* Solution Column */}
           <div className="relative overflow-hidden rounded-xl group/card">
-            <div 
+            <div
               className="absolute inset-0 z-0 transition-all duration-300
                        group-hover/card:scale-105 group-hover/card:opacity-35"
               style={{
                 backgroundImage: 'url("/images/challenges/solution-bg.jpg")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                opacity: 0.25
+                opacity: 0.25,
               }}
             />
-            <Card className="bg-transparent backdrop-blur-sm border-none h-full z-10 relative
-                         transition-transform duration-300 group-hover/card:translate-y-[-4px]">
+            <Card
+              className="bg-transparent backdrop-blur-sm border-none h-full z-10 relative
+                         transition-transform duration-300 group-hover/card:translate-y-[-4px]"
+            >
               <h3 className="text-xl font-bold text-sansan-blue mb-3 text-center">
                 {challenges[currentIndex].solutionTitle}
               </h3>
               <div className="prose prose-gray max-w-none">
-                <ReactMarkdown>
-                  {challenges[currentIndex].solution}
-                </ReactMarkdown>
+                <ReactMarkdown>{challenges[currentIndex].solution}</ReactMarkdown>
               </div>
             </Card>
           </div>
@@ -94,9 +92,11 @@ const Challenges: FC = () => {
               key={index}
               onClick={() => setCurrentIndex(index)}
               className={`h-2 rounded-full transition-all duration-300 
-                        ${currentIndex === index 
-                          ? 'w-8 bg-sansan-blue' 
-                          : 'w-2 bg-gray-300 hover:bg-sansan-blue/50'}`}
+                        ${
+                          currentIndex === index
+                            ? 'w-8 bg-sansan-blue'
+                            : 'w-2 bg-gray-300 hover:bg-sansan-blue/50'
+                        }`}
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}

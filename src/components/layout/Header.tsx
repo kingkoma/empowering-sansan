@@ -10,7 +10,7 @@ const Header: FC = () => {
             <a href="#" className="text-xl font-bold text-sansan-blue">
               Empowering Sansan
             </a>
-            <span 
+            <span
               className="absolute left-[5%] block h-[5px] w-[90px] 
                        bg-sansan-red mt-2"
               aria-hidden="true"

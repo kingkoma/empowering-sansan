@@ -9,9 +9,7 @@ interface OptimizedImageProps {
 const OptimizedImage: FC<OptimizedImageProps> = ({ src, alt, className }) => {
   // Generate srcSet for different sizes
   const sizes = [640, 768, 1024, 1280, 1536, 1920];
-  const srcSet = sizes
-    .map(size => `${src}?w=${size}&format=webp&q=80 ${size}w`)
-    .join(', ');
+  const srcSet = sizes.map(size => `${src}?w=${size}&format=webp&q=80 ${size}w`).join(', ');
 
   return (
     <img
@@ -26,4 +24,4 @@ const OptimizedImage: FC<OptimizedImageProps> = ({ src, alt, className }) => {
   );
 };
 
-export default OptimizedImage; 
+export default OptimizedImage;

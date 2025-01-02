@@ -14,8 +14,8 @@ const Footer: FC = () => {
               <ul className="space-y-1.5 text-gray-300 text-sm">
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
-                    {link.url !== "#" ? (
-                      <a 
+                    {link.url !== '#' ? (
+                      <a
                         href={link.url}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -24,9 +24,7 @@ const Footer: FC = () => {
                         {link.name}
                       </a>
                     ) : (
-                      <span className="text-gray-400">
-                        {link.name}
-                      </span>
+                      <span className="text-gray-400">{link.name}</span>
                     )}
                   </li>
                 ))}

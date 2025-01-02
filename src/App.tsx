@@ -1,11 +1,11 @@
-import { FC } from 'react'
-import Header from './components/layout/Header'
-import Footer from './components/layout/Footer'
-import Hero from './components/sections/Hero'
-import Achievements from './components/sections/Achievements'
-import Challenges from './components/sections/Challenges'
-import AboutYou from './components/sections/AboutYou'
-import Contributions from './components/sections/Contributions'
+import { FC } from 'react';
+import Header from './components/layout/Header';
+import Footer from './components/layout/Footer';
+import Hero from './components/sections/Hero';
+import Achievements from './components/sections/Achievements';
+import Challenges from './components/sections/Challenges';
+import AboutYou from './components/sections/AboutYou';
+import Contributions from './components/sections/Contributions';
 
 const App: FC = () => {
   return (
@@ -34,7 +34,7 @@ const App: FC = () => {
       </main>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

@@ -4,7 +4,8 @@
 
 @layer base {
   html {
-    font-family: sofia-pro, "Helvetica Neue", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Verdana, Meiryo, sans-serif;
+    font-family: sofia-pro, 'Helvetica Neue', 'Yu Gothic', YuGothic, 'ヒラギノ角ゴ Pro W3',
+      'Hiragino Kaku Gothic Pro', Verdana, Meiryo, sans-serif;
     scroll-behavior: smooth;
   }
 

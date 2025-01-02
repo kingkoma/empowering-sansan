@@ -1,12 +1,13 @@
 export const content = {
-    hero: {
-      title: "出会いを革新する",
-      coreMessage: "これまでの多様なプロジェクトで培った経験が、まるで点と線で繋がるように、Sansan という存在にたどり着きました。ビジネスプロセスの理解や技術的課題の解決、そしてワークフローの最適化など、これまで蓄えてきた知識とスキルを活かし、Sansan の MVV に基づく文化とイノベーションの力で社会を変えていきたい。Sansan は、私にとって次のステージであり、挑戦の場です。",
-    },
-    achievements: [
-      {
-        title: "企業ビジョンと社会的使命",
-        description: `
+  hero: {
+    title: '出会いを革新する',
+    coreMessage:
+      'これまでの多様なプロジェクトで培った経験が、まるで点と線で繋がるように、Sansan という存在にたどり着きました。ビジネスプロセスの理解や技術的課題の解決、そしてワークフローの最適化など、これまで蓄えてきた知識とスキルを活かし、Sansan の MVV に基づく文化とイノベーションの力で社会を変えていきたい。Sansan は、私にとって次のステージであり、挑戦の場です。',
+  },
+  achievements: [
+    {
+      title: '企業ビジョンと社会的使命',
+      description: `
 - **企業理念と社会的責任**  
     人権尊重を掲げ、透明性を持って社会的責任に取り組む姿勢が印象的です。
 - **ビジョンや戦略、挑戦の物語**  
@@ -14,10 +15,10 @@ export const content = {
 - **全方位に広がる価値の波紋**  
     カルチャーとテクノロジーが起点となり、従業員から地域、そして世界へと価値が波及する好循環。
         `,
-      },
-      {
-        title: "技術優位性とイノベーション",
-        description: `
+    },
+    {
+      title: '技術優位性とイノベーション',
+      description: `
 - **コア技術と研究開発**  
     OCR や名寄せ技術などのコア技術を磨き、新たなビジネス領域にも応用しています。
 - **多様な研究分野**  
@@ -25,51 +26,55 @@ export const content = {
 - **革新的なプロダクト**  
     名刺管理や請求書など、地味と思われがちな業務を面白くカラフルなものに変革しています。
         `,
-      },
-      {
-        title: "未来を切り拓く市場のリーダーシップ",
-        description: `
+    },
+    {
+      title: '未来を切り拓く市場のリーダーシップ',
+      description: `
 - **日本の美意識とグローバル感の融合**  
     日本的な細やかさと、グローバル企業としての視点を兼ね備えています。
 - **小さな変革が未来を拓く**  
     ペーパーレス化の第一歩から始め、企業の意思決定を未来と世界へ繋げる橋渡しを実現。
         `,
-      },
-      {
-        title: "チーム文化とパッション",
-        description: `
+    },
+    {
+      title: 'チーム文化とパッション',
+      description: `
 - **社員の情熱とアウトプット**  
     ブログ、ポッドキャスト、ミートアップなど、社員が自発的に情報を発信し続ける文化があります。
 - **多様性の尊重**  
     様々なバックグラウンドを持つ社員が、新たなアイデアや価値を生み出す環境を築いています。
         `,
-      },
-      {
-        title: "デザインと表現へのこだわり",
-        description: `
+    },
+    {
+      title: 'デザインと表現へのこだわり',
+      description: `
 - **簡潔性・芸術性・実用性のバランス**  
     ウェブサイトやオフィスデザインなど、すべての面でこのバランスが追求されています。
 - **グローバルなデザイン表現**  
     英語版ウェブサイトでは、シンプルかつ美しい表現が多言語対応としてのこだわりを示しています。
         `,
-      },
-    ],
-    challenges: [
-      {
-        challengeTitle: "世界経済の景気後退懸念と反グローバリズムの動き",
-        challenge: "景気後退により企業や消費者がコスト削減を重視し、投資や支出を控える傾向が強まる一方、反グローバリズムの影響で国際取引のコストが増加し、規制が強化される。これにより、企業は国内外のサプライチェーンのリスク管理を見直し、戦略的な調整を迫られる。",
-        solutionTitle: "不況下での柔軟かつ効率的な成長戦略",
-        solution: "景気後退や国際的な不確実性に対応するため、企業のコスト削減ニーズに応えた自動化ツールや ROI が明確なサービスの提供、地域特性に応じたローカライズ、柔軟な価格戦略、サプライチェーンのリスク管理、そして「必須」プロダクトとしての価値訴求を強化する。これにより、競争優位性を維持し、顧客基盤の拡大を目指す。",
-      },
-      {
-        challengeTitle: "市場競争と機能差別化の難しさ",
-        challenge: "Bill One は、競争者が激しく、ターゲット層が重なる中で、機能差別化が難しい状況に直面しています。競合が提供する請求書管理や経費精算の機能が似通っており、ユーザーには選択肢が多すぎるため、差別化が求められています。",
-        solutionTitle: "競争優位を築くための差別化と特化",
-        solution: "Bill One は、名刺管理の強みを活用した付加価値提供、特定市場へのターゲット特化、柔軟な価格設定、他ソフトウェアとの連携強化を通じて、競争優位性を確立。さらに、顧客体験全体を最適化し、「業務効率化のプラットフォーム」としての地位を確立する。",
-      },
-      {
-        challengeTitle: "グローバル展開における障害",
-        challenge: `
+    },
+  ],
+  challenges: [
+    {
+      challengeTitle: '世界経済の景気後退懸念と反グローバリズムの動き',
+      challenge:
+        '景気後退により企業や消費者がコスト削減を重視し、投資や支出を控える傾向が強まる一方、反グローバリズムの影響で国際取引のコストが増加し、規制が強化される。これにより、企業は国内外のサプライチェーンのリスク管理を見直し、戦略的な調整を迫られる。',
+      solutionTitle: '不況下での柔軟かつ効率的な成長戦略',
+      solution:
+        '景気後退や国際的な不確実性に対応するため、企業のコスト削減ニーズに応えた自動化ツールや ROI が明確なサービスの提供、地域特性に応じたローカライズ、柔軟な価格戦略、サプライチェーンのリスク管理、そして「必須」プロダクトとしての価値訴求を強化する。これにより、競争優位性を維持し、顧客基盤の拡大を目指す。',
+    },
+    {
+      challengeTitle: '市場競争と機能差別化の難しさ',
+      challenge:
+        'Bill One は、競争者が激しく、ターゲット層が重なる中で、機能差別化が難しい状況に直面しています。競合が提供する請求書管理や経費精算の機能が似通っており、ユーザーには選択肢が多すぎるため、差別化が求められています。',
+      solutionTitle: '競争優位を築くための差別化と特化',
+      solution:
+        'Bill One は、名刺管理の強みを活用した付加価値提供、特定市場へのターゲット特化、柔軟な価格設定、他ソフトウェアとの連携強化を通じて、競争優位性を確立。さらに、顧客体験全体を最適化し、「業務効率化のプラットフォーム」としての地位を確立する。',
+    },
+    {
+      challengeTitle: 'グローバル展開における障害',
+      challenge: `
 - **地域ごとの市場特性**  
     文化や商習慣の違いにより、各国に合わせた戦略が求められる。
 - **地政学的リスク**  
@@ -80,8 +85,8 @@ export const content = {
     貿易摩擦や現地規制の変動が事業展開に影響を及ぼす可能性がある。
 - **インフラとデジタルリテラシーの課題**  
     一部地域では、IT スキル不足やインターネット環境の不十分さがサービス導入の障壁となる。`,
-        solutionTitle: "Sansan の東南アジア進出戦略",
-        solution: `
+      solutionTitle: 'Sansan の東南アジア進出戦略',
+      solution: `
 - **フィリピン市場をテストケースに**  
     英語が普及し、日本とのビジネス関係が強いフィリピン市場から進出を開始。
 - **中小企業向け柔軟な価格モデル**  
@@ -93,75 +98,82 @@ export const content = {
 - **持続可能性や CSR の推進**  
     環境負荷軽減キャンペーンや社会貢献活動を通じて、ブランドイメージを強化。
 `,
-      }
+    },
+  ],
+  about: {
+    goals:
+      'Sansan のビジョンを実現する一助となれるよう、持てる力を全て発揮したいと考えております。',
+    resumeLink: '/documents/documents.zip',
+    contact: {
+      name: import.meta.env.VITE_CONTACT_NAME,
+      title: import.meta.env.VITE_CONTACT_TITLE,
+      email: import.meta.env.VITE_CONTACT_EMAIL,
+      linkedin: import.meta.env.VITE_CONTACT_LINKEDIN,
+    },
+  },
+  footer: {
+    resources: [
+      {
+        title: '参考資料',
+        links: [
+          { name: 'Sansan 公式ホームページ', url: 'https://jp.corp-sansan.com/' },
+          {
+            name: 'Sansan 統合報告書 2024',
+            url: 'https://ir.corp-sansan.com/ja/ir/library/report.html',
+          },
+          {
+            name: '創業前からの二人三脚 ...',
+            url: 'https://m.incubatefund.com/media/firstround_sansan',
+          },
+        ],
+      },
+      {
+        title: '著作権表示',
+        links: [
+          { name: 'Profile & Background Images: © 2024 kingkoma', url: '#' },
+          { name: 'Sansan Logo: © Sansan, Inc.', url: '#' },
+          {
+            name: 'LinkedIn & Email Icons: created by Ruslan Babkin, meaicon - Flaticon',
+            url: '#',
+          },
+        ],
+      },
+      {
+        title: '© 2024 Empowering Sansan',
+        links: [{ name: 'All rights reserved', url: '#' }],
+      },
     ],
-    about: {
-      goals: "Sansan のビジョンを実現する一助となれるよう、持てる力を全て発揮したいと考えております。",
-      resumeLink: "/documents/documents.zip",
-      contact: {
-        name: import.meta.env.VITE_CONTACT_NAME,
-        title: import.meta.env.VITE_CONTACT_TITLE,
-        email: import.meta.env.VITE_CONTACT_EMAIL,
-        linkedin: import.meta.env.VITE_CONTACT_LINKEDIN,
-      }
-    },
-    footer: {
-      resources: [
-        { 
-          title: "参考資料",
-          links: [
-            { name: "Sansan 公式ホームページ", url: "https://jp.corp-sansan.com/" },
-            { name: "Sansan 統合報告書 2024", url: "https://ir.corp-sansan.com/ja/ir/library/report.html" },
-            { name: "創業前からの二人三脚 ...", url: "https://m.incubatefund.com/media/firstround_sansan" }
-          ]
-        },
-        { 
-          title: "著作権表示",
-          links: [
-            { name: "Profile & Background Images: © 2024 kingkoma", url: "#" },
-            { name: "Sansan Logo: © Sansan, Inc.", url: "#" },
-            { name: "LinkedIn & Email Icons: created by Ruslan Babkin, meaicon - Flaticon", url: "#" }
-          ]
-        },
-        {
-          title: "© 2024 Empowering Sansan",
-          links: [
-            { name: "All rights reserved", url: "#" }
-          ]
-        }
-      ]
-    },
-    contributions: [
-      {
-        title: "技術的な貢献",
-        description: `
+  },
+  contributions: [
+    {
+      title: '技術的な貢献',
+      description: `
 現在 Bill One で使用されているテックスタックには浅い経験しかないものの、これまで幅広い技術スタックに対応してきたバックグラウンドと、新しい知識を素早くキャッチアップする能力を活かし、迅速にプロジェクトに適応し貢献できると確信しています。
-        `
-      },
-      {
-        title: "バイヤーとしての経験を活かす",
-        description: `
+        `,
+    },
+    {
+      title: 'バイヤーとしての経験を活かす',
+      description: `
 Bill One が直面する競争激化や差別化の課題に対し、バイヤーとして培ったユーザー視点の課題解決力と市場分析スキルを活かせると考えています。
-        `
-      },
-      {
-        title: "多言語能力と異文化理解",
-        description: `
+        `,
+    },
+    {
+      title: '多言語能力と異文化理解',
+      description: `
 北京語・広東語、閩南語（福建語）の多言語能力と、それに基づく文化理解を活用し、Sansan のグローバル展開、特に東南アジア市場への進出に貢献します。
-        `
-      },
-      {
-        title: "先見性のある洞察と技術活用",
-        description: `
+        `,
+    },
+    {
+      title: '先見性のある洞察と技術活用',
+      description: `
 政治、経済、テクノロジーの動向に敏感であることを強みとし、技術的な実現性だけでなく、将来的なトレンドや市場の変化を見据えた提案を行います。これにより、製品戦略に新たな視点をもたらします。
-        `
-      },
-      {
-        title: "自動フィードバックループの構築",
-        description: `
+        `,
+    },
+    {
+      title: '自動フィードバックループの構築',
+      description: `
 自動フィードバックループの構築というアイデアを持っています。これはエンドユーザーや社内従業員の声を効率的に収集・分析し、改善へと繋げる「好循環」の仕組みです。
-        `
-      }
-    ]
-  };
-  
+        `,
+    },
+  ],
+};

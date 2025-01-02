@@ -7,10 +7,7 @@ const Hero: FC = () => {
   const { hero } = content;
 
   return (
-    <section 
-      className="relative min-h-screen bg-white" 
-      data-testid="hero-section"
-    >
+    <section className="relative min-h-screen bg-white" data-testid="hero-section">
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">
         <OptimizedImage
@@ -25,19 +22,15 @@ const Hero: FC = () => {
       {/* Content */}
       <div className="container-wrapper-hero relative z-10 min-h-screen">
         <div className="pt-52 sm:pt-40 md:pt-40">
-          <SectionTitle 
-            className="mb-16"
-            withBackground 
-            maxWidth="max-w-2xl"
-            align="left"
-          >
+          <SectionTitle className="mb-16" withBackground maxWidth="max-w-2xl" align="left">
             {hero.title}
           </SectionTitle>
-          
+
           <div className="max-w-lg pt-32 sm:pt-0">
             <div className="backdrop-blur-sm rounded-xl p-4">
-              <p className="text-base sm:text-lg md:text-2xl text-white font-bold leading-relaxed" 
-                 data-testid="hero-content"
+              <p
+                className="text-base sm:text-lg md:text-2xl text-white font-bold leading-relaxed"
+                data-testid="hero-content"
               >
                 {hero.coreMessage}
               </p>

@@ -23,9 +23,7 @@ const Achievements: FC = () => {
 
   return (
     <div className="container-wrapper py-20">
-      <SectionTitle className="mb-12">
-        Sansan でしか実現できない変革
-      </SectionTitle>
+      <SectionTitle className="mb-12">Sansan でしか実現できない変革</SectionTitle>
 
       <div className="max-w-2xl mx-auto relative">
         <NavigationArrows
@@ -42,9 +40,7 @@ const Achievements: FC = () => {
             </h3>
             <div className="flex-1 overflow-y-auto pr-4">
               <div className="prose prose-gray max-w-none">
-                <ReactMarkdown>
-                  {achievements[currentIndex].description}
-                </ReactMarkdown>
+                <ReactMarkdown>{achievements[currentIndex].description}</ReactMarkdown>
               </div>
             </div>
           </div>
@@ -57,9 +53,11 @@ const Achievements: FC = () => {
               key={index}
               onClick={() => setCurrentIndex(index)}
               className={`h-2 rounded-full transition-all duration-300 
-                        ${currentIndex === index 
-                          ? 'w-8 bg-sansan-blue' 
-                          : 'w-2 bg-gray-300 hover:bg-sansan-blue/50'}`}
+                        ${
+                          currentIndex === index
+                            ? 'w-8 bg-sansan-blue'
+                            : 'w-2 bg-gray-300 hover:bg-sansan-blue/50'
+                        }`}
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}

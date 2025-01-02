@@ -1,0 +1,15 @@
+# Build
+dist
+build
+
+# Dependencies
+node_modules
+package-lock.json
+
+# Environment
+.env*
+!.env.example
+
+# Other
+coverage
+*.log 

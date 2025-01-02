@@ -67,9 +67,7 @@ const Contributions: FC = () => {
 
   return (
     <div className="container-wrapper py-20">
-      <SectionTitle className="mb-12">
-      泰山を運ぶ一粒の力に
-      </SectionTitle>
+      <SectionTitle className="mb-12">泰山を運ぶ一粒の力に</SectionTitle>
 
       <div className="max-w-6xl mx-auto relative">
         <NavigationArrows
@@ -80,7 +78,7 @@ const Contributions: FC = () => {
         />
 
         {/* Card Slider */}
-        <div 
+        <div
           ref={containerRef}
           className="relative overflow-hidden px-4"
           onTouchStart={handleTouchStart}
@@ -88,45 +86,52 @@ const Contributions: FC = () => {
           onTouchEnd={handleTouchEnd}
           onWheel={handleWheel}
         >
-          <div 
+          <div
             className="flex transition-transform duration-700 ease-in-out"
-            style={{ 
-              transform: window.innerWidth > 768
-                ? `translateX(calc(-${currentIndex * 33.333}% - ${currentIndex * 16}px + 16.666%))`
-                : `translateX(calc(-${currentIndex * 100}%))`
+            style={{
+              transform:
+                window.innerWidth > 768
+                  ? `translateX(calc(-${currentIndex * 33.333}% - ${currentIndex * 16}px + 16.666%))`
+                  : `translateX(calc(-${currentIndex * 100}%))`,
             }}
           >
             {contributions.map((item, index) => (
-              <div 
+              <div
                 key={index}
                 className="w-full md:w-1/3 flex-shrink-0 px-4 transition-all duration-700"
                 style={{
-                  opacity: Math.abs(currentIndex - index) > 1 ? 0.3 : 
-                          currentIndex === index ? 1 : 0.7,
+                  opacity:
+                    Math.abs(currentIndex - index) > 1 ? 0.3 : currentIndex === index ? 1 : 0.7,
                   transform: `scale(${currentIndex === index ? 1.1 : 0.85})`,
                   zIndex: currentIndex === index ? 2 : 1,
-                  transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)'
+                  transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
                 }}
               >
-                <Card 
+                <Card
                   className={`h-[300px] mx-auto max-w-sm transition-all duration-700 cursor-pointer
-                          ${currentIndex === index 
-                            ? 'shadow-2xl bg-white' 
-                            : 'shadow-md bg-white/95 hover:shadow-lg'}`}
+                          ${
+                            currentIndex === index
+                              ? 'shadow-2xl bg-white'
+                              : 'shadow-md bg-white/95 hover:shadow-lg'
+                          }`}
                   onClick={() => handleCardClick(index)}
                 >
                   <div className="h-full flex flex-col">
-                    <h3 className={`text-lg font-bold transition-all duration-700 
+                    <h3
+                      className={`text-lg font-bold transition-all duration-700 
                                 text-center truncate whitespace-nowrap
-                                ${currentIndex === index 
-                                  ? 'text-sansan-blue scale-105' 
-                                  : 'text-sansan-blue/80'}`}>
+                                ${
+                                  currentIndex === index
+                                    ? 'text-sansan-blue scale-105'
+                                    : 'text-sansan-blue/80'
+                                }`}
+                    >
                       {item.title}
                     </h3>
-                    <p className={`leading-relaxed whitespace-pre-line transition-all duration-700
-                                ${currentIndex === index 
-                                  ? 'text-gray-600' 
-                                  : 'text-gray-500'}`}>
+                    <p
+                      className={`leading-relaxed whitespace-pre-line transition-all duration-700
+                                ${currentIndex === index ? 'text-gray-600' : 'text-gray-500'}`}
+                    >
                       {item.description}
                     </p>
                   </div>
@@ -140,4 +145,4 @@ const Contributions: FC = () => {
   );
 };
 
-export default Contributions; 
+export default Contributions;
