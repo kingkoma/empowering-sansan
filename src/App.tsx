@@ -5,6 +5,7 @@ import Hero from './components/sections/Hero'
 import Achievements from './components/sections/Achievements'
 import Challenges from './components/sections/Challenges'
 import AboutYou from './components/sections/AboutYou'
+import Contributions from './components/sections/Contributions'
 
 const App: FC = () => {
   return (
@@ -23,7 +24,11 @@ const App: FC = () => {
           <Challenges />
         </section>
 
-        <section id="about" className="w-full bg-gray-50">
+        <section id="contributions" className="w-full bg-gray-50">
+          <Contributions />
+        </section>
+
+        <section id="about" className="w-full">
           <AboutYou />
         </section>
       </main>
