@@ -1,8 +1,18 @@
 import { FC } from 'react';
 import { content } from '../../data/content';
+import { GitHubIcon } from '../../assets/icons/github';
 
 const Footer: FC = () => {
   const { footer } = content;
+
+  const getIcon = (iconName?: string) => {
+    switch (iconName) {
+      case 'github':
+        return <GitHubIcon />;
+      default:
+        return null;
+    }
+  };
 
   return (
     <footer className="bg-sansan-blue text-white">
@@ -19,8 +29,10 @@ const Footer: FC = () => {
                         href={link.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-white hover:font-semibold transition-all duration-300"
+                        className="hover:text-white hover:font-semibold duration-300 
+                                 inline-flex items-center gap-2"
                       >
+                        {getIcon(link.icon)}
                         {link.name}
                       </a>
                     ) : (

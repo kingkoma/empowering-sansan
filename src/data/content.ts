@@ -139,9 +139,17 @@ export const content = {
         ],
       },
       {
-        title: '© 2024 Empowering Sansan',
-        links: [{ name: 'All rights reserved', url: '#' }],
-      },
+        title: 'このプロジェクトについて',
+        links: [
+          {
+            name: 'GitHub Repository',
+            url: 'https://github.com/kingkoma/empowering-sansan',
+            icon: 'github'
+          },
+          { name: '© 2024 Empowering Sansan', url: '#' },
+          { name: 'All rights reserved', url: '#' }
+        ]
+      }
     ],
   },
   contributions: [
