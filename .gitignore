@@ -38,3 +38,11 @@ dist-ssr
 
 # Exclude zip files in development
 *.zip
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# Keep example file
+!.env.example

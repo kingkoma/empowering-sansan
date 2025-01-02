@@ -2,6 +2,8 @@ import { FC, useState, useRef } from 'react';
 import { content } from '../../data/content';
 import Card from '../ui/Card';
 import SectionTitle from '../ui/SectionTitle';
+import linkedinIcon from '../../assets/icons/linkedin.png';
+import emailIcon from '../../assets/icons/mail.png';
 
 const AboutYou: FC = () => {
   const { about } = content;
@@ -70,9 +72,9 @@ const AboutYou: FC = () => {
               {/* Main Content */}
               <div className="relative space-y-4">
                 <div>
-                  <p className="text-sm text-gray-500 mb-1">エンジニア</p>
+                  <p className="text-sm text-gray-500 mb-1">{about.contact.title}</p>
                   <h3 className="text-xl font-bold text-sansan-blue">
-                    山田 太郎
+                    {about.contact.name}
                   </h3>
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed">
@@ -80,11 +82,32 @@ const AboutYou: FC = () => {
                 </p>
               </div>
 
-              {/* Contact Info - Removed logo from here */}
+              {/* Contact Info */}
               <div className="flex justify-between items-end text-sm text-gray-500 mt-4 pt-4 border-t border-gray-200">
                 <div>
-                  <p>📍 Tokyo, Japan</p>
-                  <p>📧 contact@example.com</p>
+                  <p className="flex items-center gap-2">
+                    <img 
+                      src={emailIcon} 
+                      alt="Email" 
+                      className="w-4 h-4 opacity-80"
+                    />
+                    {about.contact.email}
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <img 
+                      src={linkedinIcon} 
+                      alt="LinkedIn" 
+                      className="w-4 h-4 opacity-80"
+                    />
+                    <a 
+                      href={about.contact.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-sansan-blue transition-colors"
+                    >
+                      LinkedIn Profile
+                    </a>
+                  </p>
                 </div>
               </div>
             </div>

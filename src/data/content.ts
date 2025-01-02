@@ -99,6 +99,12 @@ export const content = {
       professionalBackground: "Full-stack developer with 5 years of experience in building scalable web applications.",
       goals: "To contribute to Sansan's innovative solutions by leveraging expertise in cloud technologies.",
       resumeLink: "/documents/documents.zip",
+      contact: {
+        name: import.meta.env.VITE_CONTACT_NAME,
+        title: import.meta.env.VITE_CONTACT_TITLE,
+        email: import.meta.env.VITE_CONTACT_EMAIL,
+        linkedin: import.meta.env.VITE_CONTACT_LINKEDIN,
+      }
     },
     footer: {
       contact: {
@@ -129,9 +135,9 @@ export const content = {
       copyright: {
         statement: "© 2024 Empowering Sansan. All rights reserved.",
         attribution: [
-          "Background images: Unsplash - Licensed under Creative Commons Zero",
-          "Icons: Heroicons - MIT License",
-          "Fonts: Sofia Pro - Licensed through Adobe Fonts"
+          "Profile & Background Images: © 2024 kingkoma",
+          "Sansan Logo: © Sansan, Inc.",
+          "LinkedIn & Email Icons: created by Ruslan Babkin, meaicon - Flaticon",
         ]
       }
     },
