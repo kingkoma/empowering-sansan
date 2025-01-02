@@ -1,3 +1,24 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Testing
+coverage
+
+# Production
+dist
+dist-ssr
+*.local
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+!.env.example
+
 # Logs
 logs
 *.log
@@ -6,8 +27,6 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-
-node_modules
 
 # Editor directories and files
 .vscode/*
@@ -20,6 +39,10 @@ node_modules
 *.sln
 *.sw?
 
+# Build
+dist
+*.tsbuildinfo
+
 # Exclude actual resume file but keep the directory
 public/documents/*
 !public/documents/.gitkeep
@@ -27,22 +50,3 @@ public/documents/*
 # Exclude large images but keep the directory
 public/images/*
 !public/images/.gitkeep
-
-# Build
-dist
-dist-ssr
-*.local
-.env.local
-.env.production
-.env.development
-
-# Exclude zip files in development
-*.zip
-
-# Environment files
-.env
-.env.local
-.env.production
-
-# Keep example file
-!.env.example
