@@ -1,3 +1,5 @@
+const ASSETS_URL = import.meta.env.VITE_AWS_ASSETS_URL;
+
 export const content = {
   hero: {
     title: '出会いを革新する',
@@ -103,7 +105,7 @@ export const content = {
   about: {
     goals:
       'Sansan のビジョンを実現する一助となれるよう、持てる力を全て発揮したいと考えております。',
-    resumeLink: '/documents/documents.zip',
+    resumeLink: `${ASSETS_URL}/documents/documents.zip`,
     contact: {
       name: import.meta.env.VITE_CONTACT_NAME,
       title: import.meta.env.VITE_CONTACT_TITLE,

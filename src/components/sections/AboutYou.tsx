@@ -5,6 +5,8 @@ import SectionTitle from '../ui/SectionTitle';
 import linkedinIcon from '../../assets/icons/linkedin.png';
 import emailIcon from '../../assets/icons/mail.png';
 
+const ASSETS_URL = import.meta.env.VITE_AWS_ASSETS_URL;
+
 const AboutYou: FC = () => {
   const { about } = content;
   const [showCongrats, setShowCongrats] = useState(false);
@@ -51,7 +53,7 @@ const AboutYou: FC = () => {
             >
               <div className="absolute inset-0 w-[calc(100%+2px)] h-full left-[-4px]">
                 <img
-                  src="/images/profile/my-photo.jpg"
+                  src={`${ASSETS_URL}/images/profile/my-photo.jpg`}
                   alt="Profile"
                   className="w-full h-[117%] object-cover object-[38%_center] 
                            transition-transform duration-500 group-hover:scale-110"

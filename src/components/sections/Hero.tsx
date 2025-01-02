@@ -3,6 +3,8 @@ import { content } from '../../data/content';
 import SectionTitle from '../ui/SectionTitle';
 import OptimizedImage from '../ui/OptimizedImage';
 
+const ASSETS_URL = import.meta.env.VITE_AWS_ASSETS_URL;
+
 const Hero: FC = () => {
   const { hero } = content;
 
@@ -11,7 +13,7 @@ const Hero: FC = () => {
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">
         <OptimizedImage
-          src="/images/hero-bg.jpg"
+          src={`${ASSETS_URL}/images/hero-bg.jpg`}
           alt="Hero background"
           className="w-full h-full object-cover"
         />

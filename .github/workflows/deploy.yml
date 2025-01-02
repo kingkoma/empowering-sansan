@@ -43,7 +43,16 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-northeast-1
 
-      - name: Deploy to S3
+      - name: Upload assets to S3
+        run: |
+          aws s3 cp assets/ s3://${{ secrets.AWS_ASSETS_BUCKET }} \
+            --recursive \
+            --exclude "*" \
+            --include "*.jpg" \
+            --include "*.png" \
+            --include "*.zip"
+
+      - name: Deploy website to S3
         run: |
           aws s3 sync dist/ s3://${{ secrets.AWS_S3_BUCKET }} --delete
 
