@@ -58,8 +58,14 @@ const AboutYou: FC = () => {
 
             {/* Content Section */}
             <div className="flex-1 p-6 flex flex-col justify-between relative">
-              {/* Decorative Element */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-sansan-blue/5 rounded-full -mt-16 -mr-16" />
+              {/* Sansan Logo - Moved to top right */}
+              <div className="absolute top-6 right-6">
+                <img 
+                  src="/images/sansan-logo.png" 
+                  alt="Sansan Logo" 
+                  className="h-8 w-auto opacity-90"
+                />
+              </div>
               
               {/* Main Content */}
               <div className="relative space-y-4">
@@ -74,18 +80,11 @@ const AboutYou: FC = () => {
                 </p>
               </div>
 
-              {/* Contact Info */}
+              {/* Contact Info - Removed logo from here */}
               <div className="flex justify-between items-end text-sm text-gray-500 mt-4 pt-4 border-t border-gray-200">
                 <div>
                   <p>📍 Tokyo, Japan</p>
                   <p>📧 contact@example.com</p>
-                </div>
-                <div className="flex items-center gap-2">
-                  <img 
-                    src="/images/sansan-logo.png" 
-                    alt="Sansan Logo" 
-                    className="h-8 w-auto opacity-90"
-                  />
                 </div>
               </div>
             </div>
