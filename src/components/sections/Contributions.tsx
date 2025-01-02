@@ -118,8 +118,8 @@ const Contributions: FC = () => {
                 >
                   <div className="h-full flex flex-col">
                     <h3
-                      className={`text-lg font-bold transition-all duration-700 
-                                text-center truncate whitespace-nowrap
+                      className={`text-lg font-bold mb-3 transition-all duration-700 
+                                text-center line-clamp-2
                                 ${
                                   currentIndex === index
                                     ? 'text-sansan-blue scale-105'
@@ -129,7 +129,7 @@ const Contributions: FC = () => {
                       {item.title}
                     </h3>
                     <p
-                      className={`leading-relaxed whitespace-pre-line transition-all duration-700
+                      className={`leading-relaxed overflow-y-auto pr-2
                                 ${currentIndex === index ? 'text-gray-600' : 'text-gray-500'}`}
                     >
                       {item.description}
