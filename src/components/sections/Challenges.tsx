@@ -8,6 +8,18 @@ const Challenges: FC = () => {
   const { challenges } = content;
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const handleNext = () => {
+    if (currentIndex < challenges.length - 1) {
+      setCurrentIndex(prev => prev + 1);
+    }
+  };
+
+  const handlePrev = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(prev => prev - 1);
+    }
+  };
+
   return (
     <div className="container-wrapper py-20">
       {/* Section Title */}
@@ -15,8 +27,41 @@ const Challenges: FC = () => {
         障壁とその乗り越え方
       </SectionTitle>
 
-      <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-6">
+      <div className="max-w-6xl mx-auto relative">
+        {/* Navigation Arrows */}
+        {currentIndex > 0 && (
+          <button
+            onClick={handlePrev}
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-20
+                     w-10 h-10 flex items-center justify-center
+                     bg-white/90 hover:bg-white rounded-full shadow-lg
+                     text-sansan-blue hover:text-sansan-red
+                     transition-all duration-300"
+            aria-label="Previous slide"
+          >
+            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+        )}
+
+        {currentIndex < challenges.length - 1 && (
+          <button
+            onClick={handleNext}
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-20
+                     w-10 h-10 flex items-center justify-center
+                     bg-white/90 hover:bg-white rounded-full shadow-lg
+                     text-sansan-blue hover:text-sansan-red
+                     transition-all duration-300"
+            aria-label="Next slide"
+          >
+            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        )}
+
+        <div className="grid md:grid-cols-2 gap-6 relative">
           {/* Challenge Column */}
           <div className="relative overflow-hidden rounded-xl group/card">
             <div 
