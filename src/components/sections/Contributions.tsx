@@ -2,6 +2,7 @@ import { FC, useState, useRef, TouchEvent, WheelEvent as ReactWheelEvent } from 
 import { content } from '../../data/content';
 import Card from '../ui/Card';
 import SectionTitle from '../ui/SectionTitle';
+import NavigationArrows from '../ui/NavigationArrows';
 
 const Contributions: FC = () => {
   const { contributions } = content;
@@ -67,42 +68,16 @@ const Contributions: FC = () => {
   return (
     <div className="container-wrapper py-20">
       <SectionTitle className="mb-12">
-      泰山を運ぶ一粒の力に
+        Sansanへの貢献
       </SectionTitle>
 
       <div className="max-w-6xl mx-auto relative">
-        {/* Navigation Arrows */}
-        {currentIndex > 0 && (
-          <button
-            onClick={handlePrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10
-                     w-10 h-10 flex items-center justify-center
-                     bg-white/80 hover:bg-white rounded-full shadow-lg
-                     text-sansan-blue hover:text-sansan-red
-                     transition-all duration-700"
-            aria-label="Previous slide"
-          >
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-        )}
-
-        {currentIndex < contributions.length - 1 && (
-          <button
-            onClick={handleNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10
-                     w-10 h-10 flex items-center justify-center
-                     bg-white/80 hover:bg-white rounded-full shadow-lg
-                     text-sansan-blue hover:text-sansan-red
-                     transition-all duration-700"
-            aria-label="Next slide"
-          >
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-        )}
+        <NavigationArrows
+          onPrevClick={handlePrev}
+          onNextClick={handleNext}
+          showPrev={currentIndex > 0}
+          showNext={currentIndex < contributions.length - 1}
+        />
 
         {/* Card Slider */}
         <div 

@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import { content } from '../../data/content';
 import Card from '../ui/Card';
 import SectionTitle from '../ui/SectionTitle';
+import NavigationArrows from '../ui/NavigationArrows';
 
 const Challenges: FC = () => {
   const { challenges } = content;
@@ -22,44 +23,17 @@ const Challenges: FC = () => {
 
   return (
     <div className="container-wrapper py-20">
-      {/* Section Title */}
       <SectionTitle className="mb-12">
         障壁とその乗り越え方
       </SectionTitle>
 
       <div className="max-w-6xl mx-auto relative">
-        {/* Navigation Arrows */}
-        {currentIndex > 0 && (
-          <button
-            onClick={handlePrev}
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-20
-                     w-10 h-10 flex items-center justify-center
-                     bg-white/90 hover:bg-white rounded-full shadow-lg
-                     text-sansan-blue hover:text-sansan-red
-                     transition-all duration-300"
-            aria-label="Previous slide"
-          >
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-        )}
-
-        {currentIndex < challenges.length - 1 && (
-          <button
-            onClick={handleNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-20
-                     w-10 h-10 flex items-center justify-center
-                     bg-white/90 hover:bg-white rounded-full shadow-lg
-                     text-sansan-blue hover:text-sansan-red
-                     transition-all duration-300"
-            aria-label="Next slide"
-          >
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-        )}
+        <NavigationArrows
+          onPrevClick={handlePrev}
+          onNextClick={handleNext}
+          showPrev={currentIndex > 0}
+          showNext={currentIndex < challenges.length - 1}
+        />
 
         <div className="grid md:grid-cols-2 gap-6 relative">
           {/* Challenge Column */}
