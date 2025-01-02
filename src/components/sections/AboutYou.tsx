@@ -23,7 +23,7 @@ const AboutYou: FC = () => {
   };
 
   const handleDownload = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    const fileName = about.resumeLink.split('/').pop() || 'resume.pdf';
+    const fileName = about.resumeLink.split('/').pop() || 'documents.zip';
     e.currentTarget.download = fileName;
   };
 
@@ -105,7 +105,7 @@ const AboutYou: FC = () => {
             download
           >
             <span className="mr-3 text-xl">📄</span>
-            履歴書をダウンロード
+            書類をダウンロード
           </a>
         </div>
 

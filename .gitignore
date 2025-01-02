@@ -35,3 +35,6 @@ dist-ssr
 .env.local
 .env.production
 .env.development
+
+# Exclude zip files in development
+*.zip
