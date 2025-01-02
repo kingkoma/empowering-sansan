@@ -60,12 +60,12 @@ const AboutYou: FC = () => {
             </div>
 
             {/* Content Section */}
-            <div className="flex-1 p-4 md:p-6 flex flex-col justify-between relative">
+            <div className="flex-1 p-2 md:p-4 flex flex-col justify-between relative">
               {/* Main Content */}
               <div className="relative space-y-4 pl-2 md:pl-4">
                 <div>
                   <p className="text-sm text-gray-500 mb-1 text-center">{about.contact.title}</p>
-                  <h3 className="text-xl font-bold text-sansan-blue text-center">
+                  <h3 className="text-2xl font-bold text-sansan-blue text-center">
                     {about.contact.name}
                   </h3>
                 </div>
@@ -85,7 +85,7 @@ const AboutYou: FC = () => {
                       alt="Email" 
                       className="w-4 h-4 opacity-80"
                     />
-                    <span className="truncate">{about.contact.email}</span>
+                    <span>{about.contact.email}</span>
                   </p>
                   <p className="flex items-center gap-2">
                     <img 
@@ -109,7 +109,7 @@ const AboutYou: FC = () => {
                   <img 
                     src="/images/sansan-logo.png" 
                     alt="Sansan Logo" 
-                    className="h-8 md:h-10 w-auto opacity-90"
+                    className="h-8 w-auto opacity-90"
                   />
                 </div>
               </div>
