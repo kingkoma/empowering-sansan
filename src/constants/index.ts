@@ -1,0 +1,1 @@
+export const ASSETS_URL = import.meta.env.VITE_AWS_ASSETS_URL.replace(/\/$/, ''); 

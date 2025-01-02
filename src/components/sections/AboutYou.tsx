@@ -4,8 +4,7 @@ import Card from '../ui/Card';
 import SectionTitle from '../ui/SectionTitle';
 import linkedinIcon from '../../assets/icons/linkedin.png';
 import emailIcon from '../../assets/icons/mail.png';
-
-const ASSETS_URL = import.meta.env.VITE_AWS_ASSETS_URL;
+import { ASSETS_URL } from '../../constants';
 
 const AboutYou: FC = () => {
   const { about } = content;
@@ -105,7 +104,7 @@ const AboutYou: FC = () => {
                 {/* Sansan Logo */}
                 <div>
                   <img
-                    src="/images/sansan-logo.png"
+                    src={`${ASSETS_URL}/images/sansan-logo.png`}
                     alt="Sansan Logo"
                     className="h-8 w-auto opacity-90"
                   />

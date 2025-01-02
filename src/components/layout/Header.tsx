@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { ASSETS_URL } from '../../constants';
 
 const Header: FC = () => {
   return (

@@ -4,6 +4,7 @@ import { content } from '../../data/content';
 import Card from '../ui/Card';
 import SectionTitle from '../ui/SectionTitle';
 import NavigationArrows from '../ui/NavigationArrows';
+import { ASSETS_URL } from '../../constants';
 
 const Challenges: FC = () => {
   const { challenges } = content;
@@ -40,7 +41,7 @@ const Challenges: FC = () => {
               className="absolute inset-0 z-0 transition-all duration-300
                        group-hover/card:scale-105 group-hover/card:opacity-35"
               style={{
-                backgroundImage: 'url("/images/challenges/challenge-bg.jpg")',
+                backgroundImage: `url("${ASSETS_URL}/images/challenges/challenge-bg.jpg")`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 opacity: 0.25,
@@ -65,7 +66,7 @@ const Challenges: FC = () => {
               className="absolute inset-0 z-0 transition-all duration-300
                        group-hover/card:scale-105 group-hover/card:opacity-35"
               style={{
-                backgroundImage: 'url("/images/challenges/solution-bg.jpg")',
+                backgroundImage: `url("${ASSETS_URL}/images/challenges/solution-bg.jpg")`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 opacity: 0.25,
