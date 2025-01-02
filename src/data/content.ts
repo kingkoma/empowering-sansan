@@ -107,39 +107,30 @@ export const content = {
       }
     },
     footer: {
-      contact: {
-        email: "contact@example.com",
-        social: [
-          { name: "GitHub", url: "https://github.com/sansan" },
-          { name: "LinkedIn", url: "https://linkedin.com/company/sansan" },
-        ]
-      },
       resources: [
         { 
-          title: "研究・技術資料",
+          title: "参考資料",
           links: [
-            { name: "Sansanのエンジニアブログ", url: "https://buildersbox.corp-sansan.com/" },
-            { name: "技術スタック", url: "https://sansan.github.io/technology-stack/" },
-            { name: "研究開発レポート", url: "https://jp.corp-sansan.com/rd/" }
+            { name: "Sansan 公式ホームページ", url: "https://jp.corp-sansan.com/" },
+            { name: "Sansan 統合報告書 2024", url: "https://ir.corp-sansan.com/ja/ir/library/report.html" },
+            { name: "創業前からの二人三脚 ...", url: "https://m.incubatefund.com/media/firstround_sansan" }
+          ]
+        },
+        { 
+          title: "著作権表示",
+          links: [
+            { name: "Profile & Background Images: © 2024 kingkoma", url: "#" },
+            { name: "Sansan Logo: © Sansan, Inc.", url: "#" },
+            { name: "LinkedIn & Email Icons: created by Ruslan Babkin, meaicon - Flaticon", url: "#" }
           ]
         },
         {
-          title: "参考文献",
+          title: "© 2024 Empowering Sansan",
           links: [
-            { name: "Sansan Tech Blog", url: "https://engineering.sansan.com/" },
-            { name: "Eight Career Design", url: "https://8card.net/career-design/" },
-            { name: "Bill One 開発者ブログ", url: "https://billone.engineering/" }
+            { name: "All rights reserved", url: "#" }
           ]
         }
-      ],
-      copyright: {
-        statement: "© 2024 Empowering Sansan. All rights reserved.",
-        attribution: [
-          "Profile & Background Images: © 2024 kingkoma",
-          "Sansan Logo: © Sansan, Inc.",
-          "LinkedIn & Email Icons: created by Ruslan Babkin, meaicon - Flaticon",
-        ]
-      }
+      ]
     },
     contributions: [
       {
