@@ -7,9 +7,12 @@ const Header: FC = () => {
         <nav className="flex items-center justify-between h-full">
           {/* Logo/Brand with red underline */}
           <div className="flex-shrink-0 relative">
-            <a href="#" className="text-xl font-bold text-sansan-blue">
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="text-xl font-bold text-sansan-blue"
+            >
               Empowering Sansan
-            </a>
+            </button>
             <span
               className="absolute left-[5%] block h-[5px] w-[90px] 
                        bg-sansan-red mt-2"

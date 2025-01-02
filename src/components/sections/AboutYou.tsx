@@ -155,6 +155,9 @@ const AboutYou: FC = () => {
         {showCongrats && (
           <div
             onClick={handleOverlayClick}
+            onKeyDown={e => e.key === 'Escape' && handleClose()}
+            role="button"
+            tabIndex={0}
             className="fixed inset-0 flex items-center justify-center z-50 bg-black/20 cursor-pointer"
           >
             <Card className="bg-green-50 text-green-800 mx-4 animate-bounce-in shadow-xl relative cursor-default">
