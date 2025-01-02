@@ -39,19 +39,20 @@ const AboutYou: FC = () => {
       <div className="max-w-4xl mx-auto">
         {/* Business Card Style Introduction */}
         <div className="flex justify-center mb-12">
-          <Card className="w-[546px] h-[330px] flex flex-row p-0 
+          <Card className="w-full md:w-[546px] flex flex-row p-0 
                         transform transition-all duration-500 
                         hover:shadow-2xl hover:scale-105
                         bg-gradient-to-br from-white to-gray-50 relative overflow-hidden
                         cursor-pointer">
             {/* Profile Image Section */}
-            <div className="min-w-[182px] h-full relative overflow-hidden bg-sansan-blue/10 rounded-l-xl">
+            <div className="min-w-[140px] md:min-w-[182px] h-full relative overflow-hidden 
+                          bg-sansan-blue/10 rounded-l-xl">
               <div className="absolute inset-0 w-[calc(100%+2px)] h-full left-[-4px]">
                 <img 
                   src="/images/profile/my-photo.jpg" 
                   alt="Profile" 
-                  className="w-full h-[117%] object-cover object-[38%_center] transition-transform duration-500
-                           group-hover:scale-110"
+                  className="w-full h-[117%] object-cover object-[38%_center] 
+                           transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent 
                               transition-opacity duration-500 hover:opacity-0" />
@@ -59,21 +60,12 @@ const AboutYou: FC = () => {
             </div>
 
             {/* Content Section */}
-            <div className="flex-1 p-6 flex flex-col justify-between relative">
-              {/* Sansan Logo - Moved to top right */}
-              <div className="absolute top-6 right-6">
-                <img 
-                  src="/images/sansan-logo.png" 
-                  alt="Sansan Logo" 
-                  className="h-8 w-auto opacity-90"
-                />
-              </div>
-              
+            <div className="flex-1 p-4 md:p-6 flex flex-col justify-between relative">
               {/* Main Content */}
-              <div className="relative space-y-4">
+              <div className="relative space-y-4 pl-2 md:pl-4">
                 <div>
-                  <p className="text-sm text-gray-500 mb-1">{about.contact.title}</p>
-                  <h3 className="text-xl font-bold text-sansan-blue">
+                  <p className="text-sm text-gray-500 mb-1 text-center">{about.contact.title}</p>
+                  <h3 className="text-xl font-bold text-sansan-blue text-center">
                     {about.contact.name}
                   </h3>
                 </div>
@@ -82,16 +74,18 @@ const AboutYou: FC = () => {
                 </p>
               </div>
 
-              {/* Contact Info */}
-              <div className="flex justify-between items-end text-sm text-gray-500 mt-4 pt-4 border-t border-gray-200">
-                <div>
-                  <p className="flex items-center gap-2">
+              {/* Contact Info and Logo */}
+              <div className="flex justify-between items-end text-sm text-gray-500 
+                           mt-4 pt-4 border-t border-gray-200 pl-2 md:pl-4">
+                {/* Contact Info */}
+                <div className="flex flex-col gap-2">
+                  <p className="flex gap-2">
                     <img 
                       src={emailIcon} 
                       alt="Email" 
                       className="w-4 h-4 opacity-80"
                     />
-                    {about.contact.email}
+                    <span className="truncate">{about.contact.email}</span>
                   </p>
                   <p className="flex items-center gap-2">
                     <img 
@@ -103,11 +97,20 @@ const AboutYou: FC = () => {
                       href={about.contact.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-sansan-blue transition-colors"
+                      className="hover:text-sansan-blue transition-colors truncate"
                     >
                       LinkedIn Profile
                     </a>
                   </p>
+                </div>
+
+                {/* Sansan Logo */}
+                <div>
+                  <img 
+                    src="/images/sansan-logo.png" 
+                    alt="Sansan Logo" 
+                    className="h-8 md:h-10 w-auto opacity-90"
+                  />
                 </div>
               </div>
             </div>

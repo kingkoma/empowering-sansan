@@ -96,8 +96,7 @@ export const content = {
       },
     ],
     about: {
-      professionalBackground: "Full-stack developer with 5 years of experience in building scalable web applications.",
-      goals: "To contribute to Sansan's innovative solutions by leveraging expertise in cloud technologies.",
+      goals: "Sansan様のビジョンを実現する一助となれるよう、持てる力を全て発揮したいと考えております。",
       resumeLink: "/documents/documents.zip",
       contact: {
         name: import.meta.env.VITE_CONTACT_NAME,
