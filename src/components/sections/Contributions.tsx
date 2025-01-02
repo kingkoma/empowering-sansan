@@ -117,7 +117,7 @@ const Contributions: FC = () => {
                 >
                   <div className="h-full flex flex-col">
                     <h3 className={`text-lg font-bold transition-all duration-700 
-                                truncate whitespace-nowrap
+                                text-center truncate whitespace-nowrap
                                 ${currentIndex === index 
                                   ? 'text-sansan-blue scale-105' 
                                   : 'text-sansan-blue/80'}`}>

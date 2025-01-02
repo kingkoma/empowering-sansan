@@ -50,7 +50,7 @@ const Challenges: FC = () => {
             />
             <Card className="bg-transparent backdrop-blur-sm border-none h-full z-10 relative
                          transition-transform duration-300 group-hover/card:translate-y-[-4px]">
-              <h3 className="text-xl font-bold text-sansan-red mb-3">
+              <h3 className="text-xl font-bold text-sansan-red mb-3 text-center">
                 {challenges[currentIndex].challengeTitle}
               </h3>
               <div className="prose prose-gray max-w-none">
@@ -75,7 +75,7 @@ const Challenges: FC = () => {
             />
             <Card className="bg-transparent backdrop-blur-sm border-none h-full z-10 relative
                          transition-transform duration-300 group-hover/card:translate-y-[-4px]">
-              <h3 className="text-xl font-bold text-sansan-blue mb-3">
+              <h3 className="text-xl font-bold text-sansan-blue mb-3 text-center">
                 {challenges[currentIndex].solutionTitle}
               </h3>
               <div className="prose prose-gray max-w-none">

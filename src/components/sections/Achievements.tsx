@@ -37,7 +37,7 @@ const Achievements: FC = () => {
 
         <Card className="h-[395px] transition-all duration-300">
           <div className="h-full flex flex-col">
-            <h3 className="text-xl font-bold text-sansan-blue mb-4">
+            <h3 className="text-xl font-bold text-sansan-blue mb-4 text-center">
               {achievements[currentIndex].title}
             </h3>
             <div className="flex-1 overflow-y-auto pr-4">
