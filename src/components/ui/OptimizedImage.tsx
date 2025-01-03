@@ -18,7 +18,7 @@ const OptimizedImage: FC<OptimizedImageProps> = ({
       alt={alt}
       loading="lazy"
       decoding="async"
-      fetchpriority={priority}
+      data-fetchpriority={priority}
       {...props}
     />
   );
