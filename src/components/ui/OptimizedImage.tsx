@@ -1,25 +1,25 @@
-import { FC } from 'react';
+import { FC, ImgHTMLAttributes } from 'react';
 
-interface OptimizedImageProps {
+interface OptimizedImageProps extends ImgHTMLAttributes<HTMLImageElement> {
   src: string;
   alt: string;
-  className?: string;
+  priority?: 'high' | 'low' | 'auto';
 }
 
-const OptimizedImage: FC<OptimizedImageProps> = ({ src, alt, className }) => {
-  // Generate srcSet for different sizes
-  const sizes = [640, 768, 1024, 1280, 1536, 1920];
-  const srcSet = sizes.map(size => `${src}?w=${size}&format=webp&q=80 ${size}w`).join(', ');
-
+const OptimizedImage: FC<OptimizedImageProps> = ({ 
+  src, 
+  alt, 
+  priority = 'auto',
+  ...props 
+}) => {
   return (
     <img
-      src={`${src}?w=1920&format=webp&q=80`}
-      srcSet={srcSet}
-      sizes="100vw"
+      src={src}
       alt={alt}
-      className={className}
-      loading="eager"
-      fetchPriority="high"
+      loading="lazy"
+      decoding="async"
+      fetchpriority={priority}
+      {...props}
     />
   );
 };

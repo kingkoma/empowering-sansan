@@ -2,8 +2,7 @@ import { FC } from 'react';
 import { content } from '../../data/content';
 import SectionTitle from '../ui/SectionTitle';
 import OptimizedImage from '../ui/OptimizedImage';
-
-const ASSETS_URL = import.meta.env.VITE_AWS_ASSETS_URL;
+import { ASSETS_URL } from '../../constants';
 
 const Hero: FC = () => {
   const { hero } = content;
@@ -16,6 +15,8 @@ const Hero: FC = () => {
           src={`${ASSETS_URL}/images/hero-bg.jpg`}
           alt="Hero background"
           className="w-full h-full object-cover"
+          priority="high"
+          loading="eager"
         />
         {/* Optional overlay */}
         <div className="absolute inset-0 bg-black/30" />
