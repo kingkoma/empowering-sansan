@@ -14,32 +14,34 @@ export default defineConfig({
       })
     })
   ],
+  publicDir: 'public',
   build: {
     outDir: 'dist',
-    sourcemap: false, // Set to true if you want source maps in production
+    sourcemap: false,
     minify: 'esbuild',
     cssMinify: true,
+    assetsDir: 'assets',
     rollupOptions: {
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
           markdown: ['react-markdown']
+        },
+        assetFileNames: ({ type, source }) => {
+          if (type === 'asset') {
+            return 'assets/[name].[hash].[ext]';
+          }
+          return '[name].[hash].[ext]';
         }
       }
     }
   },
   server: {
     port: 3000,
-    strictPort: true
-  },
-  envPrefix: 'VITE_',
-  // Enable environment variables in HTML
-  experimental: {
-    renderBuiltUrl: (filename: string, { hostType }: { hostType: 'js' | 'html' | 'css' }) => {
-      if (hostType === 'html') {
-        return process.env.VITE_AWS_ASSETS_URL + filename;
-      }
-      return filename;
+    strictPort: true,
+    hmr: {
+      overlay: true
     }
-  }
+  },
+  envPrefix: 'VITE_'
 })
